@@ -1,15 +1,16 @@
-### Allows to define a flexible menu ###
+### Allows to define a flexible menu. ###
 
-def default():
-	return print("Wrong Option")
+def default(msg = "Wrong Option"):
+	print(msg)
+	return -1	# aoid comparing strings in processing further.
 
 # can print something.
 def option1():
-	return "option 1"
+	return "Choice 1"
 
 # can set variables/flag values.
-def option2():
-	return True
+def option2(a = True):
+	return True and a
 
 # can do more complicated operations.
 def option3(a = 5, b = 3):
@@ -23,17 +24,7 @@ switch = {
 		3: option3
 	}
 
-# define process func
+# define process func.
 def switch_process(case):
 	choice = switch.get(case, default)
 	return choice
-		
-# Use example when switch data is printed.
-# print(switch_process(int(input("Choose an option: ")))())
-
-# Use example when switch data is processed further.
-temp = switch_process(int(input("Choose an option: ")))
-print(temp())
-
-# Find out the type for further processing.
-# print(type(temp()))
