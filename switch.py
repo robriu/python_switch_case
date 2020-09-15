@@ -26,12 +26,14 @@ switch = {
 # define process func
 def switch_process(case):
 	choice = switch.get(case, default)
-	return choice()
+	return choice
 		
 # Use example when switch data is printed.
-# print(switch_process(int(input("Choose an option: "))))
+# print(switch_process(int(input("Choose an option: ")))())
 
 # Use example when switch data is processed further.
 temp = switch_process(int(input("Choose an option: ")))
+print(temp())
 
-print(temp)
+# Find out the type for further processing.
+# print(type(temp()))
