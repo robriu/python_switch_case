@@ -16,13 +16,13 @@ if choice != switch[0]:
 		print(f"Option 1: {choice()}")
 
 	if choice == switch[2]:
-		input_flag = False	# change to play
+		input_flag = False   # change to play
 		res = choice(input_flag)
 		print(f"Option 2: True and {input_flag}: {res}")
 
 	if choice == switch[3]:
 		# Can be replaced with get function to have dynamic input.
-		a, b = 10, 20	# change to play
+		a, b = 10, 20   # change to play
 		res = choice(a, b)
 		print(f"Option 3: {a} + {b}: {res}")
 else:
