@@ -25,6 +25,7 @@ if choice != switch[0]:
         a, b = 10, 20   # change to play
         res = choice(a, b)
         print(f"Option 3: {a} + {b}: {res}")
-else:
+        
     # Can be used as: choice()
     print(choice())
+    
