@@ -1,22 +1,22 @@
-### Allows to define a flexible menu. ###
+### Define flexible menu. ###
 
 def default(msg = "Wrong Option"):
     print(msg)
-    return -1    # avoid comparing strings in processing further.
+    return -1    # Avoid comparing strings in further processing.
 
-# can print something.
+# Print anything you want.
 def option1():
     return "Choice 1"
 
-# can set variables/flag values.
+# Set variable/flag values.
 def option2(a = True):
     return True and a
 
-# can do more complicated operations.
+# And more complicated operations.
 def option3(a = 5, b = 3):
     return a + b
 
-# structure for switch statement.
+# Structure for switch statement.
 switch = {
         0: default,
         1: option1,
@@ -24,7 +24,7 @@ switch = {
         3: option3
     }
 
-# define process func.
+# Define process functions.
 def switch_process(case):
     choice = switch.get(case, default)
     return choice
